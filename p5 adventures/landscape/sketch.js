@@ -39,7 +39,7 @@ function draw() {
   text('🪲', 300, 220); // beetle
   
   textSize(175);
-  text("🐛", 400, 220); //caterpillar
+  text("🐛", mouseX, mouseY); //caterpillar
   
   textSize(75);
   text('🐞', 500, 380); // ladybird
