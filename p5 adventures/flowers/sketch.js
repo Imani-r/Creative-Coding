@@ -4,8 +4,14 @@ function setup() {
 
 function draw() {
   background(220);
-
-  square(50, 50, 100);
-  circle(100, 100, 50);
-
+  //Place code here
+  
+  
+  
+  
+  
+  /* places the x a y position of the mouse
+  on the canvas as a coordinate pair x, y */
+  fill(0)
+  text(`${mouseX}, ${mouseY}`, 20, 20);
 }
