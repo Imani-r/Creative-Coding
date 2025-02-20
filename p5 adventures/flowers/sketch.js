@@ -1,17 +1,43 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
+  frameRate(1);
 }
 
 function draw() {
-  background(220);
-  //Place code here
-  
-  
-  
-  
-  
-  /* places the x a y position of the mouse
-  on the canvas as a coordinate pair x, y */
-  fill(0)
-  text(`${mouseX}, ${mouseY}`, 20, 20);
+  background("#E1EBEE"); // light sky blue background
+
+  // // Create flower object.
+  // let myFlower = createFlower();
+
+// Testing drawFlower().
+  let flower1 = createFlower();
+  drawFlower(flower1);
+}
+
+// Function that creates a random flower object.
+function createFlower() {
+  // Define a flower object.
+  let flower = {
+    x: random(20, windowWidth),
+    y: random(20, windowHeight),
+    size: random(20, 75),
+    lifespan: random(255, 300),
+    color: color(random(255), random(255), random(255), random(300)),
+  };
+
+  // Return the flower object.
+  return flower;
+}
+
+function drawFlower(flower) {
+  noStroke();
+  fill(flower.color);
+
+  // Draw petals
+  ellipse(flower.x, flower.y, flower.size / 2, flower.size);
+  ellipse(flower.x, flower.y, flower.size, flower.size / 2);
+
+  // Draw a yellow center
+  fill(255, 204, 0);
+  circle(flower.x, flower.y, flower.size / 2);
 }
