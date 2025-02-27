@@ -20,7 +20,7 @@ function createFlower() {
   let flower = {
     x: random(20, windowWidth),
     y: random(20, windowHeight),
-    size: random(20, 75),
+    size: random(50, 190),
     lifespan: random(255, 300),
     color: color(random(255), random(255), random(255), random(300)),
   };
