@@ -5,7 +5,7 @@ let imageCount;
 
 let garden;
 let drawsPerFrame;
-let densityFactor = 0.0005; // Increase for faster fill
+let densityFactor = 0.0002; // Increase for faster fill
 
 function preload() {
   wildFlowers1 = loadImage("wildflowers_pinterest_drawing.jpg");
