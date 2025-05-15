@@ -5,7 +5,7 @@ let imageCount;
 
 let garden;
 let drawsPerFrame;
-let densityFactor = 0.0002; // Increase for faster fill
+let densityFactor = 0.2; // Increase for faster fill
 
 function preload() {
   wildFlowers1 = loadImage("wildflowers_pinterest_drawing.jpg");
@@ -32,14 +32,18 @@ function setup() {
 
 function draw() {
   image(garden, 0, 0);
+  
+  let j = floor(random(imageCount));
+  paintFlowers(wildFlowers1, j * imgWidth);
+}
 
   // Loop over each tile and draw random points from the image
-  for (let i = 0; i < drawsPerFrame; i++) {
-    for (let j = 0; j < imageCount; j++) {
-      paintFlowers(wildFlowers1, j * imgWidth);
-    }
-  }
-}
+//   for (let i = 0; i < drawsPerFrame; i++) {
+//     for (let j = 0; j < imageCount; j++) {
+//       paintFlowers(wildFlowers1, j * imgWidth);
+//     }
+//   }
+// }
 
 function paintFlowers(img, offsetX) {
   // Choose a random pixel from the image
